@@ -1,0 +1,23 @@
+;;;; cbor.egg
+
+((synopsis "Concise Binary Object Representation (RFC 8949) with typed arrays (RFC 8746)")
+ (category data)
+ (license "BSD")
+ (author "Ivan Raikov")
+ (dependencies srfi-69 datatype)
+ (test-dependencies test)
+ (components (extension cbor-core
+               (csc-options "-O3" "-d1"))
+             (extension cbor-token
+               (csc-options "-O3" "-d1")
+               (component-dependencies cbor-core))
+             (extension cbor-term
+               (csc-options "-O3" "-d1")
+               (component-dependencies cbor-core))
+             (extension cbor
+               (csc-options "-O3" "-d1")
+               (component-dependencies cbor-core))
+             (extension cbor-deflate
+               (csc-options "-O3" "-d1")
+               (source-dependencies "miniz.c" "miniz.h")
+               (component-dependencies cbor-core cbor))))

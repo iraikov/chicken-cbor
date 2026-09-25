@@ -1,0 +1,12 @@
+*.so
+*.o
+*.a
+*.c
+!miniz.c
+*.import.scm
+*.link
+*.build.sh
+*.install.sh
+*.static.o
+*~
+tests/*.tmp
