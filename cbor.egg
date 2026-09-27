@@ -2,7 +2,7 @@
 
 ((synopsis "Concise Binary Object Representation (RFC 8949) with typed arrays (RFC 8746)")
  (category data)
- (license "BSD")
+ (license "MIT")
  (author "Ivan Raikov")
  (dependencies srfi-69 datatype)
  (test-dependencies test)
