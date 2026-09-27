@@ -4,7 +4,7 @@
  (category data)
  (license "MIT")
  (author "Ivan Raikov")
- (dependencies srfi-69 datatype)
+ (dependencies srfi-69 datatype chicken-blob)
  (test-dependencies test)
  (components (extension cbor-core
                (csc-options "-O3" "-d1"))
